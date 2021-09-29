@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sensitive Search</title>
+    <style>
+        #tes{
+            width: 30%;
+        border: 5px solid brown;
+        margin: 0 auto;
+        margin-top: 100px;
+        background-color: yellow;
+        padding-top: 35px;
+        padding-bottom: 35px;
+        padding-left: 35px;
+        }
+        h1{
+            font-size: 40px;
+            color:black;
+            text-shadow: 3px 0 beige;
+        }
+        body{
+            background-color: darkolivegreen;
+        }
+    </style>
+    <script>
+        function doSearch()
+        {
+        var str = "Bubbles, Zara, Toreno, Oreo";
+        var a= document.getElementById("ip").value;
+        result=(str.search(a));
+        if(result !== -1)
+        {
+            document.getElementById("res").innerHTML = "<span style='color: green;'>It is Present</span>"
+        }
+        else
+        {
+            document.getElementById("res").innerHTML = "<span style='color: red;'>It is Absent</span>"
+        }
+    }
+        
+
+
+    </script>
+</head>
+<body>
+    <div id="tes">
+    <h1>Case Sensitive Search</h1>
+    <span>Usernames: "Bubbles, Zara, Toreno, Oreo"</span><br><br>
+    Search: <input type="text" id="ip" onmouseleave="doSearch(this.value)"> <br><br>
+    Result: <span id="res"></span>
+    </div>
+</body>
+</html>

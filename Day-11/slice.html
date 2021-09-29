@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slicing</title>
+    <style>
+        #con
+        {
+            width: 25%;
+            border: 5px solid brown;
+            margin: 0 auto;
+            margin-top: 110px;
+            background-color: whitesmoke;
+            padding-top: 35px;
+            padding-bottom: 45px;
+            
+        }
+        h1
+        {
+            font-size: 40px;
+            color:black;
+            text-shadow: 3px 0 yellowgreen;
+        }
+    body
+    {
+        text-align: center;
+        background-color: darkslategrey;
+}
+
+    </style>
+    <script>
+        function doSlice()
+        {
+            var str=document.getElementById("uname").value;
+            var start=document.getElementById("start").value;
+            var end=document.getElementById("end").value;
+            var result= str.slice(start,end);
+            document.getElementById("res").innerHTML=result;
+        }
+        doSlice();
+    </script>
+</head>
+<body>
+    <form method="POST" autocomplete="off">
+        <div id="con">
+        <h1>Slicing Property</h1>
+        String: <input type="text" id="uname" ><br><br>
+        Start Value: <input type="number" id="start"><br><br>
+        End Value: <input type="number" id="end"><br><br>
+        <input type="button" value="slice" onclick="doSlice(this.value)"> <br><br>
+        Result: <span id="res"></span>
+        </div>
+    </form>
+</body>
+</html>
